@@ -51,10 +51,11 @@ dependencies {
 afterEvaluate {
 publishing {
     publications {
-        create<MavenPublication>() {
+        release (MavenPublication) {
             from components.release
-            groupId = "com.github.ranapa47"
-            artifactId = "test-library"
+            groupId = 'com.github.ranapa47'
+            artifactId = 'test-library'
+            version = '1.0.1'
         }
     }
 }
